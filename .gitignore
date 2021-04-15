@@ -1,11 +1,11 @@
 *.pyc
 
-*comand.txt
+*/comand.txt
 
-*test.yml
+ansible/test.yml
 
 backend.zip
 
-deploy.retry
+ansible/deploy.retry
 
 *secrets.yaml
