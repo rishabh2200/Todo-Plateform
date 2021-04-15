@@ -38,7 +38,7 @@ pipeline {
                 cd $PATH_TODO_PLATEFORM/ansible
                 pwd
                 ansible-playbook deploy.yml --key-file "/home/ubuntu1820/terraform/us_key/main-key.pem" --extra-vars "PATH_TODO_PLATEFORM=$PATH_TODO_PLATEFORM" 
-                ansible-playbook docker.yml --key-file "/home/ubuntu1820/terraform/us_key/main-key.pem"
+                ansible-playbook todo-automation.yml --key-file "/home/ubuntu1820/terraform/us_key/main-key.pem"
                 '''
             }
         }
