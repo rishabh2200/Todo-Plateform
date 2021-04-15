@@ -1,0 +1,11 @@
+*.pyc
+
+*comand.txt
+
+*test.yml
+
+backend.zip
+
+deploy.retry
+
+*secrets.yaml

@@ -1,4 +1,0 @@
-summery
-{% for i in data %}
-{{i}}
-{% endfor %}
