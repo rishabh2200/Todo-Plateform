@@ -13,7 +13,7 @@ pipeline {
         
         CORS_ORIGIN_WHITELIST='http://localhost:3000'
         
-        PATH_TODO_PLATEFORM='/var/lib/jenkins/workspace/TodoWebAppDeploy'
+        PATH_TODO_PLATEFORM='/var/lib/jenkins/workspace/TodoPlatformDeploy'
 
     }
     stages {
