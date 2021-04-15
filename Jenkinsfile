@@ -19,7 +19,7 @@ pipeline {
     stages {
         stage('test') {
             steps {
-                git credentialsId: 'cff5313b-2c9f-4d48-9be4-5b51400e4338', url: 'git@code.jtg.tools:rishabh.bansal/todo_backend.git'
+                git credentialsId: 'cff5313b-2c9f-4d48-9be4-5b51400e4338', url: 'git@code.jtg.tools:rishabh.bansal/todo-platform.git'
                 sh '''#!/bin/bash
                 export  SENDGRID_PASSWORD=$SENDGRID_PASSWORD
                 cd $PATH_TODO_PLATEFORM/backend
