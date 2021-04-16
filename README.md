@@ -18,11 +18,17 @@ $ export redis_path='redis://redis:6379/0'
 
 #### Create database in postgres
 * [Postgres-WithDjango](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-django-with-postgres-nginx-and-gunicorn)  
-..* sudo su - postgres  
-..* createdb mydb  
-..* createuser -P  
-..* psql  
-..* GRANT ALL PRIVILEGES ON DATABASE mydb TO myuser;
+* sudo su - postgres  
+* createdb mydb  
+* createuser -P  
+* psql  
+* GRANT ALL PRIVILEGES ON DATABASE mydb TO myuser;  
+*Set Enviroment variable*
+$ export db_path='127.0.0.1'  
+$ export POSTGRES_DB='mydb'  
+$ export POSTGRES_USER='postgres'  
+$ export POSTGRES_PASSWORD='postgres'  
+
 
 
 
