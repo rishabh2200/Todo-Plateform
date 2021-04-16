@@ -89,6 +89,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 CORS_ORIGIN_WHITELIST = (
