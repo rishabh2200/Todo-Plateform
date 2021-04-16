@@ -1,18 +1,12 @@
 pipeline {
     agent any
     environment {
-        db_path='127.0.0.1'
-
+        db_path = '127.0.0.1'
         POSTGRES_DB='mydb'
-
         POSTGRES_USER='rishabh'
-
         POSTGRES_PASSWORD='rishabh'
-
         redis_path='redis://127.0.0.1:6379/'
-        
         CORS_ORIGIN_WHITELIST='http://localhost:3000'
-        
         PATH_TODO_PLATEFORM='/var/lib/jenkins/workspace/TodoPlatformDeploy'
 
     }
@@ -30,7 +24,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''#!/bin/bash
-                echo $SENDGRID_PASSWORD
                 cd $PATH_TODO_PLATEFORM
                 rm -rf backend.zip 
                 pwd
