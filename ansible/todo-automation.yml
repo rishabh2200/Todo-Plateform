@@ -23,4 +23,4 @@
       image: mainweb
       ports:
         - "8000:8000"
-      command: bash -c "python manage.py migrate && celery -A backend.celery worker --loglevel=info --detach && newrelic-admin run-program gunicorn --bind 0.0.0.0:8000 backend.wsgi" 
+      command: bash -c "./start.sh" 
