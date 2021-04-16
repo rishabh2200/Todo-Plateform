@@ -11,10 +11,18 @@ $ pip install -r requirements.txt
 $ services start redis  
 or  
 $ sudo systemctl start redis  
-[title](https://www.tutorialspoint.com/redis/redis_commands.htm#:~:text=To%20start%20Redis%20client%2C%20open,you%20can%20run%20any%20command.&text=In%20the%20above%20example%2C%20we,server%20is%20running%20or%20not.)  
+[redis-basic-command](https://www.tutorialspoint.com/redis/redis_commands.htm#:~:text=To%20start%20Redis%20client%2C%20open,you%20can%20run%20any%20command.&text=In%20the%20above%20example%2C%20we,server%20is%20running%20or%20not.)  
+
+*Set Enviroment variable for redis *  
+$ export redis_path='redis://redis:6379/0'  
 
 #### Create database in postgres
-
+* [Postgres-WithDjango](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-django-with-postgres-nginx-and-gunicorn)  
+..* sudo su - postgres  
+..* createdb mydb  
+..* createuser -P  
+..* psql  
+..* GRANT ALL PRIVILEGES ON DATABASE mydb TO myuser;
 
 
 
