@@ -1,0 +1,10 @@
+backend_image: rishabh2200/kubernetes_backend1
+postgres_image: postgres
+redis_image: redis:latest
+limits:
+  memory: 300Mi
+  cpu: 500m
+requests:
+  cpu: 100m
+  memory: 100Mi
+CpuUtilize: 50
