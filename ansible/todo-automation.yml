@@ -7,20 +7,19 @@
   gather_facts: no
 
   tasks:
-  - name: stop old container
-    command: docker rm -f backend
-
-  - name: delete old mainweb image
-    command: sudo docker image rm -f mainweb
-
-
   - name: creating docker image mainweb 
-    command: docker build -t mainweb /home/ec2-user/backend
+    command: docker build -t mainweb{{NEW}} /home/ec2-user/backend
   
   - name: run container
     docker_container:
-      name: backend
-      image: mainweb
+      name: backend{{NEW}}
+      image: mainweb{{NEW}}
       ports:
-        - "8000:8000"
+        - "800{{NEW}}:8000"
       command: bash -c "./start.sh" 
+
+  - name: stop old container
+    command: docker rm -f backend{{OLD}}
+
+  - name: delete old mainweb image
+    command: sudo docker image rm -f mainweb{{OLD}}
