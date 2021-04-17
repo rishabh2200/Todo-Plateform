@@ -8,18 +8,18 @@
 
   tasks:
   - name: creating docker image mainweb 
-    command: docker build -t mainweb{{NEW}} /home/ec2-user/backend
+    command: docker build -t mainweb-port-{{NEW}} /home/ec2-user/backend
   
   - name: run container
     docker_container:
-      name: backend{{NEW}}
-      image: mainweb{{NEW}}
+      name: backend-port-{{NEW}}
+      image: mainweb-port-{{NEW}}
       ports:
-        - "800{{NEW}}:8000"
+        - "{{NEW}}:8000"
       command: bash -c "./start.sh" 
 
   - name: stop old container
-    command: docker rm -f backend{{OLD}}
+    command: docker rm -f backend-port-{{OLD}}
 
   - name: delete old mainweb image
-    command: sudo docker image rm -f mainweb{{OLD}}
+    command: sudo docker image rm -f mainweb-port-{{OLD}}
