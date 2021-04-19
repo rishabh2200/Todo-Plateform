@@ -9,6 +9,15 @@
   tasks:
   - name: creating docker image mainweb 
     command: docker build -t mainweb-port-{{NEW}} /home/ec2-user/backend
+
+  - name: run new celery
+    docker_container:
+      name: celery-{{NEW}}
+      image: mainweb-port-{{NEW}}
+      command: celery -A backend worker -l info
+
+  - name: remove old celery container
+    command: docker rm -f celery-{{OLD}}
   
   - name: run container
     docker_container:
