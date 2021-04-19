@@ -1,0 +1,17 @@
+---
+#  -name: make ec2 up and running
+- hosts: demo
+  user: root
+  become: yes
+  connection: ssh
+  gather_facts: no
+
+  tasks:  
+  - name: run container
+    docker_container:
+      name: celery-{{NEW}}
+      image: mainweb-port-{{NEW}}
+      command: celery -A backend worker -l info
+
+  - name: stop old container
+    command: docker rm -f celery-{{OLD}}
